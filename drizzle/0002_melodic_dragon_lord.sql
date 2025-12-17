@@ -1,1 +1,0 @@
-ALTER TABLE `Users` ADD `shift` int DEFAULT 0;

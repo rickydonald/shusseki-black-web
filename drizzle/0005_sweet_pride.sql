@@ -1,1 +1,0 @@
-ALTER TABLE `UserFeedback` DROP COLUMN `replyViewed`;
