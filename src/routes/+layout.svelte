@@ -3,17 +3,10 @@
 	import favicon from "$lib/assets/shusseki-logo-512x512.webp";
 	import BottomTab from "$lib/components/custom/BottomTab.svelte";
 	import PwaInstallPrompt from "$lib/components/custom/PwaInstallPrompt.svelte";
-	import PushNotificationPrompt from "$lib/components/custom/PushNotificationPrompt.svelte";
 	import { page } from "$app/state";
 	import { Toaster, toast } from "svelte-sonner";
 	import { onMount } from "svelte";
 	import { browser } from "$app/environment";
-	import {
-		initPushNotifications,
-		listenForPushLifecycle,
-		onUserLogin,
-		onUserLogout,
-	} from "$lib/push/client";
 
 	let { children } = $props();
 
@@ -30,7 +23,6 @@
 		if (!currentUserId) {
 			// User logged out
 			if (lastUserId) {
-				onUserLogout();
 				lastUserId = null;
 				isProcessingLogin = false;
 			}
@@ -42,17 +34,7 @@
 		if (currentUserId !== lastUserId && !isProcessingLogin) {
 			isProcessingLogin = true;
 			lastUserId = currentUserId;
-			onUserLogin(currentUserId)
-				.then(() => {
-					console.log(
-						"[App] User login processed for push notifications",
-					);
-					isProcessingLogin = false;
-				})
-				.catch((err) => {
-					console.error("[App] Error processing user login:", err);
-					isProcessingLogin = false;
-				});
+			
 		}
 
 		if (
@@ -61,15 +43,7 @@
 			!isProcessingLogin
 		) {
 			pushRegistrationRequested = true;
-			initPushNotifications()
-				.then((success) => {
-					if (!success) {
-						pushRegistrationRequested = false;
-					}
-				})
-				.catch(() => {
-					pushRegistrationRequested = false;
-				});
+		
 		}
 	});
 
@@ -98,16 +72,7 @@
 				});
 
 				// Listen for push notification lifecycle events
-				listenForPushLifecycle(
-					() => {
-						// On subscribed
-						console.log("[App] Push notifications subscribed");
-					},
-					() => {
-						// On unsubscribed
-						console.log("[App] Push notifications unsubscribed");
-					},
-				);
+				
 			} catch (error) {
 				console.log("PWA registration not available:", error);
 			}

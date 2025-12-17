@@ -1,20 +1,11 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import PushNotificationSettings from "$lib/components/custom/PushNotificationSettings.svelte";
 	import PageHeader from "$lib/components/custom/PageHeader.svelte";
 	import Bell02Icon from "@untitled-theme/icons-svelte/Bell02Icon.svelte";
 	import InfoCircleIcon from "@untitled-theme/icons-svelte/InfoCircleIcon.svelte";
 	import CheckCircleIcon from "@untitled-theme/icons-svelte/CheckCircleIcon.svelte";
 	import Monitor01Icon from "@untitled-theme/icons-svelte/Monitor01Icon.svelte";
 	import ClockCheckIcon from "@untitled-theme/icons-svelte/ClockCheckIcon.svelte";
-	import {
-		isPushSupported,
-		isPushSubscribed,
-		getPermissionStatus,
-		getUserDevices,
-		cleanupOldDevices,
-		getDeviceId,
-	} from "$lib/push/client";
 	import { toast } from "svelte-sonner";
 	import shiftTimings from "$lib/data/shift_timings.json";
     import { LogOut01Icon } from "@untitled-theme/icons-svelte";
@@ -41,38 +32,6 @@
 	let updatingShift = $state(false);
 	let lastShiftUpdateTime = $state<number>(0);
 	const MIN_UPDATE_INTERVAL = 2000; // 2 seconds minimum between updates
-
-	onMount(async () => {
-		// Load shift preference
-		await loadShiftPreference();
-
-		isSupported = isPushSupported();
-		if (isSupported) {
-			permission = getPermissionStatus();
-			isSubscribed = await isPushSubscribed();
-
-			// Get device info
-			const ua = navigator.userAgent;
-			deviceInfo.browser = getBrowserName(ua);
-			deviceInfo.os = getOSName(ua);
-			deviceInfo.currentDeviceId = getDeviceId();
-
-			// Try to get subscription date from localStorage
-			const subDate = localStorage.getItem("push_subscription_date");
-			if (subDate) {
-				deviceInfo.subscriptionDate = new Date(
-					subDate,
-				).toLocaleDateString("en-US", {
-					year: "numeric",
-					month: "long",
-					day: "numeric",
-				});
-			}
-
-			// Load user's devices
-			await loadUserDevices();
-		}
-	});
 
 	async function loadShiftPreference() {
 		loadingShift = true;
@@ -152,41 +111,6 @@
 		const lastPeriod = periods[periods.length - 1];
 
 		return `${firstPeriod.startTime} - ${lastPeriod.endTime}`;
-	}
-
-	async function loadUserDevices() {
-		if (!isSubscribed) return;
-
-		loadingDevices = true;
-		try {
-			const result = await getUserDevices();
-			if (result.success && result.devices) {
-				userDevices = result.devices;
-			}
-		} catch (error) {
-			console.error("Failed to load devices:", error);
-		} finally {
-			loadingDevices = false;
-		}
-	}
-
-	async function handleCleanupOldDevices() {
-		if (cleaningUp) return;
-
-		cleaningUp = true;
-		try {
-			const result = await cleanupOldDevices();
-			if (result.success) {
-				toast.success("Old devices removed successfully");
-				await loadUserDevices();
-			} else {
-				toast.error(result.error || "Failed to cleanup devices");
-			}
-		} catch (error) {
-			toast.error("Failed to cleanup devices");
-		} finally {
-			cleaningUp = false;
-		}
 	}
 
 	function getBrowserName(ua: string): string {
@@ -329,7 +253,7 @@
 		</div>
 		<div class="p-6 space-y-6">
 			<!-- Notification Toggle -->
-			<PushNotificationSettings />
+
 
 			<!-- Status Information -->
 			{#if isSupported}
@@ -429,15 +353,6 @@
 								Connected Devices ({userDevices.length})
 							</h4>
 							{#if userDevices.length > 1}
-								<button
-									onclick={handleCleanupOldDevices}
-									disabled={cleaningUp}
-									class="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50"
-								>
-									{cleaningUp
-										? "Removing..."
-										: "Remove Others"}
-								</button>
 							{/if}
 						</div>
 
