@@ -1,0 +1,1 @@
+ALTER TABLE `UserFeedback` MODIFY COLUMN `reply` varchar(500);

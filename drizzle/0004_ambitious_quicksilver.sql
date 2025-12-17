@@ -1,0 +1,1 @@
+ALTER TABLE `UserFeedback` ADD `replyViewed` boolean DEFAULT false NOT NULL;

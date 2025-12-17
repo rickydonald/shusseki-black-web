@@ -1,0 +1,1 @@
+ALTER TABLE `UserFeedback` MODIFY COLUMN `feedback` varchar(500) NOT NULL;

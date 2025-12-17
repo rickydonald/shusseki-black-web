@@ -1,0 +1,1907 @@
+[
+    {
+        "date": "01.11.2025",
+        "day": "SAT",
+        "events": [
+            "All Saints' Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.11.2025",
+        "day": "SUN",
+        "events": [
+            "All Souls' Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.11.2025",
+        "day": "MON",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "04.11.2025",
+        "day": "TUE",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "05.11.2025",
+        "day": "WED",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "06.11.2025",
+        "day": "THU",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "07.11.2025",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.11.2025",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.11.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "10.11.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "11.11.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "12.11.2025",
+        "day": "WED",
+        "events": [
+            "College Reopens for EVEN Semester"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.11.2025",
+        "day": "THU",
+        "events": [
+            "Registration Begins for EVEN Semester Repeaters"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "14.11.2025",
+        "day": "FRI",
+        "events": [
+            "EVEN Semester Fee Payment Begins"
+        ],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.11.2025",
+        "day": "SAT",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.11.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.11.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.11.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.11.2025",
+        "day": "WED",
+        "events": [],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.11.2025",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.11.2025",
+        "day": "FRI",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.11.2025",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.11.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "24.11.2025",
+        "day": "MON",
+        "events": [
+            "Feast of Christ the King"
+        ],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "25.11.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.11.2025",
+        "day": "WED",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.11.2025",
+        "day": "THU",
+        "events": [
+            "Internal Arrear Registration Begins"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "28.11.2025",
+        "day": "FRI",
+        "events": [
+            "Springboard Leadership Programme Session - III"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "29.11.2025",
+        "day": "SAT",
+        "events": [
+            "Retreat for Religious Brothers & Sisters"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.11.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.12.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.12.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.12.2025",
+        "day": "WED",
+        "events": [
+            "Feast of St. Francis Xavier"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.12.2025",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.12.2025",
+        "day": "FRI",
+        "events": [
+            "Department Festival Day - 1"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.12.2025",
+        "day": "SAT",
+        "events": [
+            "Department Festival Day - 2"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.12.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.12.2025",
+        "day": "MON",
+        "events": [
+            "Immaculate Conception of Our Lady"
+        ],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.12.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "10.12.2025",
+        "day": "WED",
+        "events": [
+            "III UG Internship Begins"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "11.12.2025",
+        "day": "THU",
+        "events": [
+            "Last date for Payment of Semester Fee without fine"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "12.12.2025",
+        "day": "FRI",
+        "events": [
+            "FDP for Junior Academic Staff",
+            "Last date for Registration of Even Semester Repeaters"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.12.2025",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "14.12.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.12.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.12.2025",
+        "day": "TUE",
+        "events": [
+            "IQAC Meeting - External Members"
+        ],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.12.2025",
+        "day": "WED",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.12.2025",
+        "day": "THU",
+        "events": [
+            "Last date for Internal Arrear Registration"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.12.2025",
+        "day": "FRI",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.12.2025",
+        "day": "SAT",
+        "events": [
+            "Christmas Celebrations"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.12.2025",
+        "day": "SUN",
+        "events": [
+            "Christmas Holidays Begin"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.12.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.12.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "24.12.2025",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "25.12.2025",
+        "day": "THU",
+        "events": [
+            "Christmas"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.12.2025",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.12.2025",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "28.12.2025",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "29.12.2025",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.12.2025",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "31.12.2025",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.01.2026",
+        "day": "THU",
+        "events": [
+            "New Year"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.01.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.01.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.01.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.01.2026",
+        "day": "MON",
+        "events": [
+            "College reopens after Christmas vacation"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.01.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.01.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.01.2026",
+        "day": "THU",
+        "events": [
+            "Last date for Payment of Semester Fee with fine"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.01.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "10.01.2026",
+        "day": "SAT",
+        "events": [
+            "III UG join classes after Internship"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "11.01.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "12.01.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.01.2026",
+        "day": "TUE",
+        "events": [
+            "Pongal celebrations / Bhogi"
+        ],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "14.01.2026",
+        "day": "WED",
+        "events": [
+            "Pongal"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.01.2026",
+        "day": "THU",
+        "events": [
+            "Thiruvalluvar Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.01.2026",
+        "day": "FRI",
+        "events": [
+            "Uzhavar Thirunal"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.01.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.01.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.01.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.01.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.01.2026",
+        "day": "WED",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-6",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "22.01.2026",
+        "day": "THU",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-1",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "23.01.2026",
+        "day": "FRI",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-2",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "24.01.2026",
+        "day": "SAT",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-3",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "25.01.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.01.2026",
+        "day": "MON",
+        "events": [
+            "Republic Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.01.2026",
+        "day": "TUE",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-4",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "28.01.2026",
+        "day": "WED",
+        "events": [
+            "First CIA"
+        ],
+        "day_order": "Day-5",
+        "is_exam": true,
+        "exam_type": "CIA 1"
+    },
+    {
+        "date": "29.01.2026",
+        "day": "THU",
+        "events": [
+            "Online Registration for Semester Exam Begins"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.01.2026",
+        "day": "FRI",
+        "events": [
+            "Springboard Leadership Programme Session - IV & Valedictory"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "31.01.2026",
+        "day": "SAT",
+        "events": [
+            "Parent-Teacher Meeting"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.02.2026",
+        "day": "SUN",
+        "events": [
+            "Thaipusam"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.02.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.02.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.02.2026",
+        "day": "WED",
+        "events": [
+            "Feast of St. John de Britto"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.02.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.02.2026",
+        "day": "FRI",
+        "events": [
+            "Open Forum for Students"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.02.2026",
+        "day": "SAT",
+        "events": [
+            "Retreat for Teaching and Non-Teaching Staff & Student Defaulters"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.02.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.02.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "10.02.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "11.02.2026",
+        "day": "WED",
+        "events": [
+            "Feast of Our Lady of Lourdes-Candlelight Procession"
+        ],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "12.02.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.02.2026",
+        "day": "FRI",
+        "events": [
+            "Last date for Online Registration of Semester Exams without fine"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "14.02.2026",
+        "day": "SAT",
+        "events": [
+            "Sports Day"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.02.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.02.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.02.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.02.2026",
+        "day": "WED",
+        "events": [
+            "Ash Wednesday"
+        ],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.02.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.02.2026",
+        "day": "FRI",
+        "events": [
+            "FDP for Academic Staff & Workshop for Administrative Staff"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.02.2026",
+        "day": "SAT",
+        "events": [
+            "Men's Hostel Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.02.2026",
+        "day": "SUN",
+        "events": [
+            "Women's Hostel Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.02.2026",
+        "day": "MON",
+        "events": [
+            "Mentoring for III UG"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "24.02.2026",
+        "day": "TUE",
+        "events": [
+            "Mentoring for II UG",
+            "Last date for Online Registration of Semester Exams with fine"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "25.02.2026",
+        "day": "WED",
+        "events": [
+            "Mentoring for I UG"
+        ],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.02.2026",
+        "day": "THU",
+        "events": [
+            "Mentoring for I & II PG"
+        ],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.02.2026",
+        "day": "FRI",
+        "events": [
+            "Farewell Day for III UG and II PG"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "28.02.2026",
+        "day": "SAT",
+        "events": [
+            "Loyola Research Day"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.03.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.03.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.03.2026",
+        "day": "TUE",
+        "events": [
+            "Loyola Students' Council (LSC) Valedictory"
+        ],
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.03.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.03.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.03.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.03.2026",
+        "day": "SAT",
+        "events": [
+            "College Day"
+        ],
+        "day_order": "Day-6",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.03.2026",
+        "day": "SUN",
+        "events": [
+            "International Women's Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.03.2026",
+        "day": "MON",
+        "events": [
+            "Second CIA"
+        ],
+        "day_order": "Day-1",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "10.03.2026",
+        "day": "TUE",
+        "events": [
+            "Second CIA",
+            "Online Staff Assessment & Exit Poll"
+        ],
+        "day_order": "Day-2",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "11.03.2026",
+        "day": "WED",
+        "events": [
+            "Second CIA"
+        ],
+        "day_order": "Day-3",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "12.03.2026",
+        "day": "THU",
+        "events": [
+            "Second CIA"
+        ],
+        "day_order": "Day-4",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "13.03.2026",
+        "day": "FRI",
+        "events": [
+            "Second CIA",
+            "Academic Council Meeting"
+        ],
+        "day_order": "Day-5",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "14.03.2026",
+        "day": "SAT",
+        "events": [
+            "Second CIA"
+        ],
+        "day_order": "Day-6",
+        "is_exam": true,
+        "exam_type": "CIA 2"
+    },
+    {
+        "date": "15.03.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.03.2026",
+        "day": "MON",
+        "events": [
+            "Release of Retest & One Test List"
+        ],
+        "day_order": "Day-1",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.03.2026",
+        "day": "TUE",
+        "events": [
+            "Retest",
+            "IQAC Meeting - External Members",
+            "Practical Examinations UG-Allied/PG"
+        ],
+        "day_order": "Day-2",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "18.03.2026",
+        "day": "WED",
+        "events": [
+            "Retest",
+            "College Council Meeting",
+            "Practical Examinations UG - Allied / PG"
+        ],
+        "day_order": "Day-3",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "19.03.2026",
+        "day": "THU",
+        "events": [
+            "Retest",
+            "Practical Examinations UG-Allied/PG",
+            "Stock Verification"
+        ],
+        "day_order": "Day-4",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "20.03.2026",
+        "day": "FRI",
+        "events": [
+            "Telugu New Year"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.03.2026",
+        "day": "SAT",
+        "events": [
+            "Penitential Walk to St. Thomas Mount",
+            "Ramzan (Eid-ul-Fitr)"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.03.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.03.2026",
+        "day": "MON",
+        "events": [
+            "Hall Ticket Release",
+            "Practical Examinations UG-Major/PG"
+        ],
+        "day_order": "Day-5",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "24.03.2026",
+        "day": "TUE",
+        "events": [
+            "Practical Examinations UG-Major/PG",
+            "General Staff Meeting & Last Signing Day"
+        ],
+        "day_order": "Day-6",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "25.03.2026",
+        "day": "WED",
+        "events": [
+            "Practical Examinations UG- Major/PG"
+        ],
+        "day_order": "Day-1",
+        "is_exam": true,
+        "exam_type": "Practicals"
+    },
+    {
+        "date": "26.03.2026",
+        "day": "THU",
+        "events": [
+            "Semester Examinations Begin"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "27.03.2026",
+        "day": "FRI",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "28.03.2026",
+        "day": "SAT",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "29.03.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.03.2026",
+        "day": "MON",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "31.03.2026",
+        "day": "TUE",
+        "events": [
+            "Mahavir Jayanthi"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.04.2026",
+        "day": "WED",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "02.04.2026",
+        "day": "THU",
+        "events": [
+            "Maundy Thursday"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.04.2026",
+        "day": "FRI",
+        "events": [
+            "Good Friday"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.04.2026",
+        "day": "SAT",
+        "events": [
+            "Holy Saturday"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.04.2026",
+        "day": "SUN",
+        "events": [
+            "Easter Sunday"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.04.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.04.2026",
+        "day": "TUE",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "08.04.2026",
+        "day": "WED",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "09.04.2026",
+        "day": "THU",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "10.04.2026",
+        "day": "FRI",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "11.04.2026",
+        "day": "SAT",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "12.04.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.04.2026",
+        "day": "MON",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "14.04.2026",
+        "day": "TUE",
+        "events": [
+            "Tamil New Year's Day / Dr. Ambedkar Jayanthi"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.04.2026",
+        "day": "WED",
+        "events": [
+            "Semester Examinations"
+        ],
+        "day_order": null,
+        "is_exam": true,
+        "exam_type": "Semester"
+    },
+    {
+        "date": "16.04.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.04.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.04.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.04.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.04.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.04.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.04.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.04.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "24.04.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "25.04.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.04.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.04.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "28.04.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "29.04.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.04.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "01.05.2026",
+        "day": "FRI",
+        "events": [
+            "May Day"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "02.05.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "03.05.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "04.05.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "05.05.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "06.05.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "07.05.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "08.05.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "09.05.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "10.05.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "11.05.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "12.05.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "13.05.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "14.05.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "15.05.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "16.05.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "17.05.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "18.05.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "19.05.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "20.05.2026",
+        "day": "WED",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "21.05.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "22.05.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "23.05.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "24.05.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "25.05.2026",
+        "day": "MON",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "26.05.2026",
+        "day": "TUE",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "27.05.2026",
+        "day": "WED",
+        "events": [
+            "Bakrid (Eidal-Adha)"
+        ],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "28.05.2026",
+        "day": "THU",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "29.05.2026",
+        "day": "FRI",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "30.05.2026",
+        "day": "SAT",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
+        "date": "31.05.2026",
+        "day": "SUN",
+        "events": [],
+        "day_order": null,
+        "is_exam": false,
+        "exam_type": null
+    }
+]
