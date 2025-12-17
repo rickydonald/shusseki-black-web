@@ -25,13 +25,13 @@ export class Scrapper {
      * `dob` should be a string in ISO format (YYYY-MM-DD) representing the
      * @returns 
      */
-    static async getAttendanceData(data: AttendanceInputProps, html: string): Promise<AttendanceResponse> {
+    static async getAttendanceData(data: AttendanceInputProps): Promise<AttendanceResponse> {
 
         if (!data.dno || !data.dob) {
             return { error: 'DNO and DOB are required', status: false, errorCode: "missing_data" };
         }
 
-        // const url = `https://erp.loyolacollege.edu/loyolaonline/online/AttendanceReportInner.jsp?registerno=${data.dno}&iden=1&randid=55&dob=${helpers.formatDateISOToDMY(data.dob)}`;
+        const url = `https://erp.loyolacollege.edu/loyolaonline/online/AttendanceReportInner.jsp?registerno=${data.dno}&iden=1&randid=55&dob=${helpers.formatDateISOToDMY(data.dob)}`;
 
         try {
             const insecureAgent = new https.Agent({
@@ -55,14 +55,14 @@ export class Scrapper {
                 'Referer': 'https://erp.loyolacollege.edu/',
             };
 
-            // const response = await axios.get(url, {
-            //     headers,
-            //     timeout: 30000,
-            //     maxRedirects: 5,
-            //     validateStatus: (status) => status < 500
-            // });
+            const response = await axios.get(url, {
+                headers,
+                timeout: 30000,
+                maxRedirects: 5,
+                validateStatus: (status) => status < 500
+            });
 
-            // const html = response.data;
+            const html = response.data;
             const $ = cheerio.load(html);
 
             let name = '';

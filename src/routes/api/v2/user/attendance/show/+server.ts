@@ -2,20 +2,13 @@ import { json } from "@sveltejs/kit";
 import { Minions } from "$lib/utils/minions";
 import { Scrapper } from "$lib/models/attendance-scrapper.js";
 import { Constants } from "$lib/constants.js";
+import { scrapeAttendance } from "$lib/models/erp-scrapper/attendance.js";
+import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile.js";
 
 const URL = "https://erp.loyolacollege.edu/loyolaonline/students/report/studentHourWiseAttendance.jsp";
 
-export async function GET({ cookies }) {
-    const cachedCookies = cookies.get(Constants._COOKIES.ERP_SESSION_COOKIE_NAME);
-
-    if (!cachedCookies) {
-        return json(
-            { success: false, error: "Not logged in" },
-            { status: 401 }
-        );
-    }
-
-    const decrypted = Minions.decryptSessionCookie(cachedCookies);
+export async function GET({ locals }) {
+    const decrypted = Minions.decryptSessionCookie(locals.user?.session || "");
     const sessionCookies = JSON.parse(decrypted).cookies;
 
     const cookieHeader = sessionCookies
@@ -29,14 +22,12 @@ export async function GET({ cookies }) {
     });
 
     const html = await res.text();
-
-    const response = await Scrapper.getAttendanceData({
-        dno: "w",
-        dob: "2020-01-01"
-    }, html);
+    const scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, html)
+    const profileScrapper = await scrapeStudentProfile(cookieHeader);
 
     return json({
         success: true,
-        data: response
+        data: scrapper,
+        profileScrapper
     });
 }

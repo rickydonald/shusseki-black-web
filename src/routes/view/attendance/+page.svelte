@@ -44,7 +44,7 @@
 	import { toast } from "svelte-sonner";
 	import { slide, fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
-	import { scrapperStore } from "$lib/stores/attendance-store";
+	import { scrapperProfileStore, scrapperStore } from "$lib/stores/attendance-store";
 	import { RefreshCw01Icon } from "@untitled-theme/icons-svelte";
 
 	// ===== Props =====
@@ -52,6 +52,7 @@
 
 	// ===== State Variables =====
 	let scrapper = $derived($scrapperStore);
+	let scrapperProfile = $derived($scrapperProfileStore);
 	let isLoading: boolean = $state(false);
 	let loadError: boolean = $state(false);
 	let errorMessage: string = $state("");
@@ -79,20 +80,20 @@
 	// Feedback prompt state
 	let showFeedbackPrompt: boolean = $state(false);
 
-	function checkIfBirthday() {
-		if (!data?.user?.creds?.dateOfBirth) return false;
+	// function checkIfBirthday() {
+	// 	if (!data?.user?.creds?.dateOfBirth) return false;
 
-		const today = DateTime.now().setZone("Asia/Kolkata");
-		const dob = data.user.creds.dateOfBirth;
+	// 	const today = DateTime.now().setZone("Asia/Kolkata");
+	// 	const dob = data.user.creds.dateOfBirth;
 
-		const dobParts = dob.includes("-") ? dob.split("-") : [];
-		if (dobParts.length !== 3) return false;
+	// 	const dobParts = dob.includes("-") ? dob.split("-") : [];
+	// 	if (dobParts.length !== 3) return false;
 
-		const dobDay = parseInt(dobParts[2]);
-		const dobMonth = parseInt(dobParts[1]);
+	// 	const dobDay = parseInt(dobParts[2]);
+	// 	const dobMonth = parseInt(dobParts[1]);
 
-		return today.day === dobDay && today.month === dobMonth;
-	}
+	// 	return today.day === dobDay && today.month === dobMonth;
+	// }
 
 	function isBirthdayCardShownToday() {
 		if (typeof localStorage === "undefined") return false;
@@ -143,13 +144,13 @@
 			showReleaseNotes = true;
 		}
 
-		isBirthday = checkIfBirthday();
-		if (isBirthday && !isBirthdayCardShownToday()) {
-			setTimeout(() => {
-				showBirthdayCard = true;
-				markBirthdayCardAsShown();
-			}, 1000);
-		}
+		// isBirthday = checkIfBirthday();
+		// if (isBirthday && !isBirthdayCardShownToday()) {
+		// 	setTimeout(() => {
+		// 		showBirthdayCard = true;
+		// 		markBirthdayCardAsShown();
+		// 	}, 1000);
+		// }
 
 		// Check if we should show feedback prompt
 		if (shouldShowFeedbackPrompt()) {
@@ -196,7 +197,7 @@
 
 	// ===== API Service Functions =====
 	async function fetchAttendanceData() {
-		return await axios.get(Constants._API_URI.SHOW_USER_ATTENDANCE, {
+		return await axios.get("/api/v2/user/attendance/show", {
 			headers: { "Content-Type": "application/json" },
 		});
 	}
@@ -291,6 +292,7 @@
 		try {
 			const { data } = await fetchAttendanceData();
 			scrapperStore.set(data.data);
+			scrapperProfileStore.set(data.profileScrapper);
 			setLoadingState(false);
 			setTimeout(() => {
 				showFullHeader = false;
@@ -397,13 +399,13 @@
 	// ===== User Display Functions =====
 	function getUserDisplayName(): string {
 		return helpers.capitalizeWords(
-			scrapper?.data?.student.name || "Student",
+			scrapperProfile?.name || "Student",
 		);
 	}
 
 	function getUserFirstName(): string {
 		const showSecondName = ["25-PPH-010", "25-UBU-074"].includes(
-			data.user.creds.departmentNumber,
+			data.user.userId
 		);
 		if (showSecondName) {
 			return getUserDisplayName().split(" ")[1];
@@ -500,9 +502,9 @@
 						<div class="flex items-center gap-3.5 min-w-0 flex-1">
 							<div class="relative flex-shrink-0">
 								<img
-									src={ShussekiLogoWebp}
+									src={scrapperProfile?.photoUrl || ShussekiLogoWebp}
 									alt="avatar"
-									class="rounded-2xl w-[48px] h-[48px] shadow-sm"
+									class="rounded-lg border w-12 shadow-sm"
 								/>
 								{#if isBirthday}
 									<div

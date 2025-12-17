@@ -3,18 +3,9 @@ import type { AttendanceResponse } from "../attendance-scrapper";
 import * as cheerio from 'cheerio';
 
 export async function scrapeAttendance(
-    data: { dno: string, dob: string },
+    data: { dno: string },
     html: string
 ): Promise<AttendanceResponse> {
-
-    if (!data.dno || !data.dob) {
-        return {
-            status: false,
-            error: 'DNO and DOB are required',
-            errorCode: 'missing_data'
-        };
-    }
-
     try {
         const $ = cheerio.load(html);
 

@@ -3,8 +3,8 @@ import ReleaseNotes from '$lib/data/release_notes.json';
 
 export class Constants {
     public static readonly _SITE = {
-        NAME: "Shusseki",
-        TAMIL_NAME: "சுஸெக்கி",
+        NAME: "Shusseki Black",
+        TAMIL_NAME: "சுஸெக்கி பிளாக்",
         VERSION: ReleaseNotes.currentVersion,
         VERSION_CODE: ReleaseNotes.versionCode,
         MAINTENANCE_MODE_KEY: "app:maintenance_mode",

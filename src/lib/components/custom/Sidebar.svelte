@@ -70,7 +70,7 @@
                     <h2
                         class="text-[32px] font-bold text-gray-900 tracking-tight mb-0.5"
                     >
-                        Shusseki
+                        {Constants._SITE.NAME}
                     </h2>
                     <!-- <p class="text-[13px] text-gray-600 font-medium">Shusseki Platform</p> -->
                 </div>
@@ -94,14 +94,6 @@
             >
                 <CalendarIcon class="w-6 h-6 mr-3" />
                 <span>Academic Calendar</span>
-            </button>
-            <hr class="my-6" />
-            <button
-                onclick={() => handleNavigation("/view/feedback")}
-                class="flex items-center gap-2 font-medium text-xl w-full"
-            >
-                <MessageChatCircleIcon class="w-6 h-6 mr-3" />
-                <span>Feedback</span>
             </button>
             <hr class="my-6" />
             <button

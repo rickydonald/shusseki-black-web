@@ -1,3 +1,5 @@
+import type { Cookie } from "playwright-core";
+
 /**
  * Session information stored in JWT
  */
@@ -11,8 +13,8 @@ export interface Session {
     expiresAt: number;
 }
 export interface ScrapperParams {
-    departmentNumber: string;
-    dateOfBirth: string;
+    username: string;
+    password: string;
 }
 
 /**
@@ -21,15 +23,14 @@ export interface ScrapperParams {
 export interface User {
     sessionId: string;
     userId: string;
-    creds: ScrapperParams;
     fullName: string;
     role: UserRole;
     shift: number;
     userType?: UserRole;
+    session?: string;
 }
 export interface ShussekiUser {
     userId: string;
-    creds: ScrapperParams;
     fullName: string;
     isBanned: boolean;
     role: UserRole;
@@ -37,3 +38,12 @@ export interface ShussekiUser {
 }
 
 export type UserRole = "user" | "x-user" | "x-admin-user";
+
+
+export interface ErpSession {
+    creds: {
+        username: string;
+        password: string;
+    },
+    cookies: Cookie[];
+}
