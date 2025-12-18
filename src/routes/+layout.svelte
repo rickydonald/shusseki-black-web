@@ -7,6 +7,7 @@
 	import { Toaster, toast } from "svelte-sonner";
 	import { onMount } from "svelte";
 	import { browser } from "$app/environment";
+    import { Constants } from "$lib/constants";
 
 	let { children } = $props();
 
@@ -96,7 +97,7 @@
 		rel="stylesheet"
 	/>
 	<link rel="icon" href={favicon} />
-	<title>Shusseki</title>
+	<title>{Constants._SITE.NAME}</title>
 	<link rel="apple-touch-icon" href="/splash_screens/icon.png" />
 </svelte:head>
 
