@@ -51,11 +51,6 @@ export async function GET({ locals, fetch }) {
         let html = await res.text();
         scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, html);
         profileScrapper = await scrapeStudentProfile(cookieHeader);
-        // return json({
-        //     success: true,
-        //     data: scrapper,
-        //     profileScrapper: profileScrapper
-        // });
     }
 
     return json({
