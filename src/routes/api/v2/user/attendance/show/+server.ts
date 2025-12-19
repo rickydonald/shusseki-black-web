@@ -3,8 +3,6 @@ import { Minions } from "$lib/utils/minions";
 import { scrapeAttendance } from "$lib/models/erp-scrapper/attendance.js";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile.js";
 
-const URL = "https://erp.loyolacollege.edu/loyolaonline/students/report/studentHourWiseAttendance.jsp";
-
 export async function GET({ locals, fetch }) {
     const decrypted = Minions.decryptSessionCookie(locals.user?.session || "");
     const decryptedJson = JSON.parse(decrypted);
@@ -31,15 +29,9 @@ export async function GET({ locals, fetch }) {
                 error: "Internal re-login failed"
             }, { status: 500 });
         }
+        
 
-        const res = await fetch(URL, {
-            headers: {
-                Cookie: cookieHeader
-            }
-        });
-
-        let html = await res.text();
-        scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, html);
+        scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, cookieHeader);
         profileScrapper = await scrapeStudentProfile(cookieHeader);
     }
 
