@@ -36,6 +36,7 @@ export const getAttendanceStatusColor = (status: string) => {
         ML: 'bg-orange-200 text-orange-800',
         DA: 'bg-black text-white',
         AR: 'bg-teal-200 text-teal-800',
+        SL: "bg-yellow-300 text-yellow-900",
     };
     return map[status] ?? 'bg-gray-100 text-gray-800';
 };

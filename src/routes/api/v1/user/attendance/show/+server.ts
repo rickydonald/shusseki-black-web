@@ -9,7 +9,7 @@ export const GET: RequestHandler = async (event) => {
     if (authCheck) return authCheck;
 
     const { url, locals } = event;
-    const username = locals.user?.creds.departmentNumber;
+    const username = locals.user?.userId;
     const dateOfBirth = locals.user?.creds.dateOfBirth;
     if (!username || !dateOfBirth) {
         return json({

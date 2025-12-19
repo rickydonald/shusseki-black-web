@@ -11,7 +11,7 @@ export const GET: RequestHandler = async (event) => {
 
     const { locals } = event;
     try {
-        const userId = locals.user?.creds.departmentNumber ?? "";
+        const userId = locals.user?.userId ?? "";
         const classCode = userId.substring(0, 8);
 
         if (!classCode) {

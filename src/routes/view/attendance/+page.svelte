@@ -292,7 +292,7 @@
 		try {
 			const { data } = await fetchAttendanceData();
 			scrapperStore.set(data.data);
-			scrapperProfileStore.set(data.profileScrapper);
+			scrapperProfileStore.set(data.profile);
 			setLoadingState(false);
 			setTimeout(() => {
 				showFullHeader = false;
@@ -500,11 +500,11 @@
 				>
 					<div class="flex items-center justify-between mb-8 gap-3">
 						<div class="flex items-center gap-3.5 min-w-0 flex-1">
-							<div class="relative flex-shrink-0">
+							<div class="relative shrink-0">
 								<img
 									src={ShussekiLogoWebp}
 									alt="avatar"
-									class="rounded-lg border w-12 h-12 shadow-sm"
+									class="rounded-2xl w-12 h-12 shadow-sm"
 								/>
 								{#if isBirthday}
 									<div

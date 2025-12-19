@@ -2,7 +2,7 @@
     import type { AttendanceFormat } from "$lib/types/attendance-scrapper.type";
 
     interface Props {
-        type: "Present" | "Absent" | "On Duty" | "Medical" | "Casual";
+        type: "Present" | "Absent" | "On Duty" | "Medical" | "Casual" | "Service Learning";
         value: AttendanceFormat;
         labelType?: "percentage" | "hours";
         onclick?: () => void;
@@ -16,6 +16,7 @@
         "On Duty": "bg-blue-200",
         Medical: "bg-orange-200",
         Casual: "bg-purple-200",
+        "Service Learning": "bg-yellow-200",
     };
     let bgColor: string = $state(bgColorMap[type]);
 

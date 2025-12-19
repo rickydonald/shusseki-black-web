@@ -61,7 +61,7 @@
         <div class="text-center pt-4">
             <p class="text-[10px] text-gray-400">
                 © {new Date().getFullYear()}
-                {Constants._SITE.NAME} • SRGM30N25
+                {Constants._SITE.NAME} • NRPR17N25
             </p>
         </div>
     </div>

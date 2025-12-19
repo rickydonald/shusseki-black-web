@@ -4,7 +4,7 @@ import { eq } from "drizzle-orm";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ locals }) => {
-    const userId = locals.user?.creds.departmentNumber ?? "";
+    const userId = locals.user?.userId ?? "";
     const classCode = userId.substring(0, 8);
 
     // Get the current timetable

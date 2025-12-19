@@ -11,7 +11,7 @@ export class Constants {
         MOBILE_ONLY_MODE: true
     }
     public static readonly _COOKIES = {
-        SESSION_COOKIE_NAME: "shussekiMinionSessionVerifier",
+        SESSION_COOKIE_NAME: "ShussekiSessionVerifier",
         CSRF_COOKIE_NAME: "shussekiXsrfVerifier",
         ERP_SESSION_COOKIE_NAME: "shussekiScrapperErpSession",
         EXPIRES: DateTime.now().plus({ days: 30 }).toJSDate()

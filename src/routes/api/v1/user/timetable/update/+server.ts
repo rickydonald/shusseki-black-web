@@ -20,7 +20,7 @@ export const PUT: RequestHandler = async (event) => {
         })
     }
 
-    const userId = locals.user?.creds.departmentNumber ?? "";
+    const userId = locals.user?.userId ?? "";
     const classCode = userId.substring(0, 8);
     const now = DateTime.now().toUTC().toISO();
 
