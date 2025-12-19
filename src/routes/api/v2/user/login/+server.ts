@@ -12,6 +12,8 @@ import { checkBruteForce, recordFailure, resetFailures } from "$lib/server/rate-
 import type { ErpSession, User } from "$lib/types/session.type";
 import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright";
 import { Minions } from "$lib/utils/minions";
+import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile";
+import { buildCookieHeader } from "$lib/h";
 
 export const POST: RequestHandler = async ({ request, cookies, locals }) => {
     const formData = await request.formData();
@@ -85,8 +87,11 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
 
     // Ensure user exists in database else create new user
     if (shussekiUserRecord.length === 0) {
+        const cookieHeader = buildCookieHeader({ cookies: login.cookies ?? [] });
+        const profile = await scrapeStudentProfile(cookieHeader);
         await db.insert(users).values({
             userId: dno,
+            name: profile.name ?? "",
             createdAtServer: currentTimestamp,
         });
         shussekiUserRecord = await db.select().from(users).where(eq(users.userId, dno)).limit(1);

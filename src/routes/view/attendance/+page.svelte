@@ -31,7 +31,6 @@
 		filterAttendance,
 		type Filter,
 	} from "$lib/models/filter-attendance";
-	import { Constants } from "$lib/constants";
 	import ShussekiLogoWebp from "$lib/assets/shusseki-logo-512x512.webp";
 	import { goto, invalidateAll } from "$app/navigation";
 	import academicCalendar from "$lib/data/academic_calendar.json";
@@ -68,7 +67,7 @@
 
 	// Shift selection state
 	let showShiftModal: boolean = $state(false);
-	let userShift: number = $state(data?.user?.shift ?? 0);
+	let userShift: number = $derived(data?.user?.shift ?? 0);
 
 	// Sidebar state
 	let isSidebarOpen: boolean = $state(false);

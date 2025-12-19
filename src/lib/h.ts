@@ -40,3 +40,8 @@ export function attendanceFormatter(data: AttendanceSummaryProps, overrideCode?:
         },
     };
 }
+
+export const buildCookieHeader = (session: any) =>
+    session.cookies
+        .map((c: { name: string; value: string }) => `${c.name}=${c.value}`)
+        .join("; ");
