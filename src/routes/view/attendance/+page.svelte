@@ -289,8 +289,8 @@
 
 		try {
 			const { data } = await fetchAttendanceData();
-			scrapperStore.set(data.data);
-			scrapperProfileStore.set(data.profile);
+			scrapperStore.set(data.data.attendance);
+			scrapperProfileStore.set(data.data.profile);
 			setLoadingState(false);
 			setTimeout(() => {
 				showFullHeader = false;

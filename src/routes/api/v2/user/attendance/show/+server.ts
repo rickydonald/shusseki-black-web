@@ -48,7 +48,6 @@ export async function GET({ locals, fetch }) {
 
             cookieHeader = buildCookieHeader();
 
-            // Retry profile AFTER re-login
             profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
             attendance = await scrapeAttendance({ dno: locals.user.userId }, cookieHeader);
 
@@ -70,8 +69,10 @@ export async function GET({ locals, fetch }) {
 
         return json({
             success: true,
-            data: attendance,
-            profile
+            data: {
+                attendance,
+                profile
+            },
         });
 
     } catch (err) {

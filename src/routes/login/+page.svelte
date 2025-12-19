@@ -257,7 +257,7 @@
                         </p>
                     </div>
 
-                    <!-- DOB Input -->
+                    <!-- Password Input -->
                     <div class="mb-3">
                         <input
                             type="password"
