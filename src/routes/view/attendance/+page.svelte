@@ -502,9 +502,9 @@
 						<div class="flex items-center gap-3.5 min-w-0 flex-1">
 							<div class="relative flex-shrink-0">
 								<img
-									src={scrapperProfile?.photoUrl || ShussekiLogoWebp}
+									src={ShussekiLogoWebp}
 									alt="avatar"
-									class="rounded-lg border w-12 shadow-sm"
+									class="rounded-lg border w-12 h-12 shadow-sm"
 								/>
 								{#if isBirthday}
 									<div
@@ -528,13 +528,6 @@
 								>
 									{getUserDisplayName()}
 								</p>
-								{#if data.user.userId === "25-PCS-018"}
-									<span
-										class="inline-block bg-red-500 rounded-md py-0.5 px-2 text-white text-[9px] font-bold tracking-wider font-geist-mono! mt-1"
-									>
-										ATTENDANCE OVERRIDE
-									</span>
-								{/if}
 							</div>
 						</div>
 						<div class="flex items-center gap-2 flex-shrink-0">

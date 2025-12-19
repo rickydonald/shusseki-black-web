@@ -19,10 +19,6 @@ export function attendanceFormatter(data: AttendanceSummaryProps, overrideCode?:
     let ml = Number(data.hoursML);
     let od = Number(data.hoursOD);
 
-    if (overrideCode === "25-PCS-018"){
-        absent = absent - 25;
-    }
-
     const totalHours = present + absent + cl + ml + od;
     const percent = (val: number) => totalHours > 0 ? Number(((val / totalHours) * 100).toFixed(1)) : 0;
 

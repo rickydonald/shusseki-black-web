@@ -1,10 +1,7 @@
 import { json } from "@sveltejs/kit";
 import { Minions } from "$lib/utils/minions";
-import { Scrapper } from "$lib/models/attendance-scrapper.js";
-import { Constants } from "$lib/constants.js";
 import { scrapeAttendance } from "$lib/models/erp-scrapper/attendance.js";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile.js";
-import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright.js";
 
 const URL = "https://erp.loyolacollege.edu/loyolaonline/students/report/studentHourWiseAttendance.jsp";
 
@@ -17,14 +14,7 @@ export async function GET({ locals, fetch }) {
         .map((c: { name: string; value: string }) => `${c.name}=${c.value}`)
         .join("; ");
 
-    const res = await fetch(URL, {
-        headers: {
-            Cookie: cookieHeader
-        }
-    });
-
-    let html = await res.text();
-    let scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, html)
+    let scrapper = await scrapeAttendance({ dno: locals.user?.userId || "" }, cookieHeader)
     let profileScrapper = await scrapeStudentProfile(cookieHeader);
 
     if (!profileScrapper.name) {

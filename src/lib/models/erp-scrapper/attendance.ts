@@ -2,11 +2,21 @@ import { attendanceFormatter } from "$lib/h";
 import type { AttendanceResponse } from "../attendance-scrapper";
 import * as cheerio from 'cheerio';
 
+const URL = "https://erp.loyolacollege.edu/loyolaonline/students/report/studentHourWiseAttendance.jsp";
+
 export async function scrapeAttendance(
     data: { dno: string },
-    html: string
+    cookieHeader: string
 ): Promise<AttendanceResponse> {
     try {
+        const res = await fetch(URL, {
+            headers: {
+                Cookie: cookieHeader
+            }
+        });
+
+        const html = await res.text();
+
         const $ = cheerio.load(html);
 
         /* ---------------------------------
@@ -51,6 +61,8 @@ export async function scrapeAttendance(
             hoursDA: getHidden('hdnDA'),
             hoursLA: getHidden('hdnLA'),
         };
+
+        console.log(summaryRaw)
 
         const formattedSummary = attendanceFormatter(
             summaryRaw,
@@ -123,6 +135,8 @@ export async function scrapeAttendance(
                 totalRows: lifeSkillTotalRows
             }
         };
+
+        console.log(result)
 
         return {
             status: true,
