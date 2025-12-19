@@ -14,7 +14,6 @@
 	import FloatingBalloons from "$lib/components/custom/FloatingBalloons.svelte";
 	import LifeSkillCard from "$lib/components/custom/LifeSkillCard.svelte";
 	import ImpactCard from "$lib/components/custom/ImpactCard.svelte";
-	import FeedbackPromptCard from "$lib/components/custom/FeedbackPromptCard.svelte";
 	import NoAttendanceData from "$lib/components/custom/NoAttendanceData.svelte";
 	import Menu01Icon from "@untitled-theme/icons-svelte/Menu01Icon.svelte";
 	import AlertTriangleIcon from "@untitled-theme/icons-svelte/AlertTriangleIcon.svelte";
@@ -529,7 +528,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="flex items-center gap-2 flex-shrink-0">
+						<div class="flex items-center gap-2 shrink-0">
 							<button
 								onclick={doAttendanceRefresh}
 								disabled={isLoading}
@@ -574,17 +573,6 @@
 				</div>
 			{/if}
 		</section>
-
-		<!-- Feedback Prompt Card -->
-		{#if showFeedbackPrompt && !showFullHeader}
-			<section
-				class="w-full mt-1"
-				in:slide={{ duration: 400, delay: 250, easing: cubicOut }}
-				out:slide={{ duration: 400, easing: cubicOut }}
-			>
-				<FeedbackPromptCard onClose={dismissFeedbackPrompt} />
-			</section>
-		{/if}
 
 		{#if !showFullHeader}
 			<div

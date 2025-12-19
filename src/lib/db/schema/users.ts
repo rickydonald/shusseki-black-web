@@ -1,21 +1,6 @@
 import type { ClassTimetable } from "$lib/models/client-db";
 import { mysqlTable, varchar, mysqlEnum, serial, timestamp, boolean, json, int } from "drizzle-orm/mysql-core"
 
-/** User Feedbacks Schema */
-export const userFeedbacks = mysqlTable("UserFeedback", {
-	id: serial().primaryKey(),
-	feedbackId: varchar({ length: 191 }).notNull().unique(),
-	userId: varchar({ length: 191 }).notNull(),
-	feedbackType: mysqlEnum(['bug', 'feature', 'problem', 'suggestion', 'others']).default('others').notNull(),
-	feedback: varchar({ length: 500 }).notNull(),
-	isReplied: boolean().default(false).notNull(),
-	reply: varchar({ length: 500 }),
-	createdAt: timestamp().defaultNow(),
-	updatedAt: varchar({ length: 191 }).notNull(),
-	subject: varchar({ length: 191 }).notNull(),
-	errorCode: varchar({ length: 191 }),
-});
-
 /** User Schema */
 export const users = mysqlTable("Users", {
 	id: serial().primaryKey(),
