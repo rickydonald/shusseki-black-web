@@ -147,10 +147,6 @@
     }
 </script>
 
-<svelte:head>
-	<title>Settings - Shusseki</title>
-</svelte:head>
-
 <PageHeader title="Settings" backUrl="/view/attendance" />
 
 <div class="container mx-auto p-4 space-y-6 max-w-2xl pb-24">

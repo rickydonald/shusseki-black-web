@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-	<title>X-User Login - Shusseki</title>
+	<title>X-User Login</title>
 </svelte:head>
 
 <div class="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-black p-4">

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>404 Not Found - Shusseki</title>
+    <title>404 Not Found</title>
     <meta name="description" content="The page you are looking for does not exist." />
 </svelte:head>
 

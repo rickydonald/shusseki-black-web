@@ -38,7 +38,7 @@
         class="w-full md:max-w-full py-6 px-6 bg-[#F7F6FA] rounded-t-2xl mt-2"
     >
         <p class="text-sm text-gray-500 text-center">
-            © 2025 Shusseki |
+            © 2025 {Constants._SITE.NAME} |
             {Constants._SITE.VERSION_CODE}
         </p>
     </section>

@@ -54,11 +54,10 @@
 
             <!-- Message -->
             <div class="space-y-4">
-                <h1 class="text-3xl font-bold text-gray-900">
-                    Mobile Only
-                </h1>
+                <h1 class="text-3xl font-bold text-gray-900">Mobile Only</h1>
                 <p class="text-gray-600 leading-relaxed">
-                    Shusseki is designed exclusively for mobile devices to give you the best attendance tracking experience on-the-go.
+                    {Constants._SITE.NAME} is designed exclusively for mobile devices
+                    to give you the best attendance tracking experience on-the-go.
                 </p>
             </div>
 
@@ -110,7 +109,7 @@
                         {browser ? window.location.origin : ""}
                     </p>
                 </div>
-                
+
                 <button
                     onclick={copyToClipboard}
                     class="w-full py-3 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors"
