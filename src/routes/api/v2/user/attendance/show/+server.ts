@@ -1,5 +1,5 @@
 import { json } from "@sveltejs/kit";
-import { Minions } from "$lib/utils/minions";
+import { Wap7 } from "$lib/utils/wap7";
 import { scrapeAttendance } from "$lib/models/erp-scrapper/attendance";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile";
 
@@ -13,7 +13,7 @@ export async function GET({ locals, fetch }) {
         }
 
         const session = JSON.parse(
-            Minions.decryptSessionCookie(locals.user.session)
+            Wap7.decryptSessionCookie(locals.user.session)
         );
 
         const buildCookieHeader = () =>

@@ -2,7 +2,7 @@ import { error, json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 import type { ErpSession, User } from "$lib/types/session.type";
 import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright";
-import { Minions } from "$lib/utils/minions";
+import { Wap7 } from "$lib/utils/wap7";
 import { Constants } from "$lib/constants";
 import jwt from 'jsonwebtoken'
 import { JWT_SECRET } from "$env/static/private";
@@ -35,7 +35,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         },
         cookies: login.cookies ?? []
     }
-    const encryptedSessionCookie = Minions.encryptSessionCookie(JSON.stringify(erpSession));
+    const encryptedSessionCookie = Wap7.encryptSessionCookie(JSON.stringify(erpSession));
 
     const userSession = locals.user;
     if (!userSession) {

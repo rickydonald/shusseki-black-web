@@ -2,7 +2,7 @@ import { bytesToHex, hexToBytes, managedNonce, randomBytes } from '@noble/cipher
 import { xchacha20poly1305 } from '@noble/ciphers/chacha.js';
 import { ERP_SESSION_COOKIE_ENCRYPTION_KEY } from '$env/static/private';
 
-export class Minions {
+export class Wap7 {
     static keyGenerator() {
         const key = randomBytes(32);
         return bytesToHex(key);

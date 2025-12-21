@@ -11,7 +11,7 @@ import { eq } from "drizzle-orm";
 import { checkBruteForce, recordFailure, resetFailures } from "$lib/server/rate-limiter";
 import type { ErpSession, User } from "$lib/types/session.type";
 import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright";
-import { Minions } from "$lib/utils/minions";
+import { Wap7 } from "$lib/utils/wap7";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile";
 import { buildCookieHeader } from "$lib/h";
 
@@ -113,7 +113,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         },
         cookies: login.cookies ?? []
     }
-    const encryptedSessionCookie = Minions.encryptSessionCookie(JSON.stringify(session));
+    const encryptedSessionCookie = Wap7.encryptSessionCookie(JSON.stringify(session));
 
     // JWT by Shusseki
     const sessionId = crypto.randomUUID();
