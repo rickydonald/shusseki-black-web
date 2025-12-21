@@ -54,6 +54,7 @@
 	let isLoading: boolean = $state(false);
 	let loadError: boolean = $state(false);
 	let errorMessage: string = $state("");
+	let isReauthenticating: boolean = $state(false);
 	let showFullHeader = $derived(scrapper === null);
 
 	// Release notes state
@@ -286,9 +287,24 @@
 
 		setLoadingState(true);
 		resetErrorState();
+		
+		const reauthTimer = setTimeout(() => {
+			if (isLoading && !loadError) {
+				isReauthenticating = true;
+			}
+		}, 3000);
 
 		try {
 			const { data } = await fetchAttendanceData();
+			
+			clearTimeout(reauthTimer);
+			
+			// Check if re-authentication occurred
+			if (data.reauthenticated) {
+				console.log("ERP session was re-authenticated");
+			}
+			isReauthenticating = false;
+			
 			scrapperStore.set(data.data.attendance);
 			scrapperProfileStore.set(data.data.profile);
 			setLoadingState(false);
@@ -296,7 +312,9 @@
 				showFullHeader = false;
 			}, 350);
 		} catch (err) {
+			clearTimeout(reauthTimer);
 			setLoadingState(false);
+			isReauthenticating = false;
 			loadError = true;
 			handleErrorResponse(err, { setErrorState: true });
 		}
@@ -486,6 +504,34 @@
 							>
 								{isLoading ? "Retrying..." : "Retry"}
 							</button>
+						</div>
+					{:else if isReauthenticating}
+						<div class="text-center px-6">
+							<div class="mb-4 relative">
+								<ShussekiLogo width={70} height={70} />
+								<div class="absolute -bottom-2 left-1/2 -translate-x-1/2">
+									<div class="flex gap-1">
+										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+									</div>
+								</div>
+							</div>
+							<div class="mt-8 space-y-2">
+								<h2 class="text-xl font-semibold text-gray-900">
+									Re-authenticating
+								</h2>
+								<p class="text-sm text-gray-600">
+									Refreshing your ERP session...
+								</p>
+								<div class="mt-4 inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-medium">
+									<svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+										<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+										<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+									</svg>
+									<span>Please wait...</span>
+								</div>
+							</div>
 						</div>
 					{:else}
 						<ShussekiLogo width={70} height={70} />

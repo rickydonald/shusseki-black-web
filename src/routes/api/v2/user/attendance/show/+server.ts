@@ -22,11 +22,13 @@ export async function GET({ locals, fetch }) {
                 .join("; ");
 
         let cookieHeader = buildCookieHeader();
+        let reauthenticated = false;
 
         let profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
         let attendance;
 
         if (!profile?.name) {
+            reauthenticated = true;
             const loginRes = await fetch("/api/v2/user/internal-login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -69,6 +71,7 @@ export async function GET({ locals, fetch }) {
 
         return json({
             success: true,
+            reauthenticated,
             data: {
                 attendance,
                 profile
