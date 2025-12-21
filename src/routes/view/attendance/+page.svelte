@@ -429,12 +429,6 @@
 		return getUserDisplayName().split(" ")[0];
 	}
 
-	function getCurrentDateDisplay(): string {
-		return DateTime.now()
-			.setZone("Asia/Kolkata")
-			.toLocaleString(DateTime.DATE_MED);
-	}
-
 	function getGreeting(): string {
 		return helpers.greet();
 	}
