@@ -8,6 +8,13 @@
       "when": 1765995936743,
       "tag": "0000_last_beast",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1766426548094,
+      "tag": "0001_good_nuke",
+      "breakpoints": true
     }
   ]
 }
