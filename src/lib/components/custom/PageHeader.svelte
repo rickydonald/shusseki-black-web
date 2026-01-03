@@ -11,7 +11,7 @@
 </script>
 
 <div class="sticky top-0 bg-white backdrop-blur-lg z-10 border-b border-gray-200">
-	<div class="px-4 pt-4 pb-3">
+	<div class="px-4 pb-3" style="padding-top: max(1rem, env(safe-area-inset-top));">
 		<div class="flex items-center gap-3">
 			<button
 				onclick={() => goto(backUrl)}

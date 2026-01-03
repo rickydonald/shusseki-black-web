@@ -63,7 +63,7 @@
         <!-- Header -->
         <header
             class="relative backdrop-blur-xl bg-white/80 border-b border-gray-200 px-8 py-6 shrink-0"
-            style="animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;"
+            style="padding-top: max(1.5rem, env(safe-area-inset-top)); animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;"
         >
             <div class="flex items-center justify-between">
                 <div>
