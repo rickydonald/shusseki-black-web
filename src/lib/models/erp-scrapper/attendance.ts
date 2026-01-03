@@ -136,8 +136,6 @@ export async function scrapeAttendance(
             }
         };
 
-        console.log(result)
-
         return {
             status: true,
             error: null,

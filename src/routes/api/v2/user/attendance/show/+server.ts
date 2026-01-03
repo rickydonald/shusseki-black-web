@@ -48,7 +48,13 @@ export async function GET({ locals, fetch }) {
                 );
             }
 
-            cookieHeader = buildCookieHeader();
+            // Update session with new cookies from the reauthentication
+            const updatedSession = JSON.parse(
+                Wap7.decryptSessionCookie(locals.user.session)
+            );
+            cookieHeader = updatedSession.cookies
+                .map((c: { name: string; value: string }) => `${c.name}=${c.value}`)
+                .join("; ");
 
             profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
             attendance = await scrapeAttendance({ dno: locals.user.userId }, cookieHeader);

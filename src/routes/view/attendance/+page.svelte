@@ -326,7 +326,8 @@
 
 		try {
 			const { data } = await fetchAttendanceData();
-			scrapperStore.set(data.data);
+			scrapperStore.set(data.data.attendance);
+			scrapperProfileStore.set(data.data.profile);
 			resetErrorState();
 			toast.success("Attendance data refreshed!", {
 				id: toastId,
