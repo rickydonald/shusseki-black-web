@@ -44,7 +44,7 @@
         align-items: center;
         z-index: 1000;
         margin: 15px;
-        margin-bottom: max(15px, env(safe-area-inset-bottom));
+        margin-bottom: calc(env(safe-area-inset-bottom) + 15px);
         padding-bottom: env(safe-area-inset-bottom);
     }
 </style>

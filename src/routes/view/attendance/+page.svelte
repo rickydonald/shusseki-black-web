@@ -535,7 +535,7 @@
 			{:else}
 				<div
 					class="py-6 pb-3 w-full"
-					style="padding-top: max(1.5rem, env(safe-area-inset-top));"
+					style="padding-top: calc(env(safe-area-inset-top) + 1.5rem);"
 					in:fade={{ duration: 400, delay: 200, easing: cubicOut }}
 				>
 					<div class="flex items-center justify-between mb-8 gap-3">
