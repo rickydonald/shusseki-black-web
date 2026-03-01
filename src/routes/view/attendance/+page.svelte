@@ -502,17 +502,10 @@
 						</div>
 					{:else if isReauthenticating}
 						<div class="text-center px-6">
-							<div class="mb-4 relative">
+							<div class="relative flex items-center justify-center-safe">
 								<ShussekiLogo width={70} height={70} />
-								<div class="absolute -bottom-2 left-1/2 -translate-x-1/2">
-									<div class="flex gap-1">
-										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
-										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
-										<div class="w-2 h-2 bg-gray-800 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
-									</div>
-								</div>
 							</div>
-							<div class="mt-8 space-y-2">
+							<div class="mt-6 space-y-2">
 								<h2 class="text-xl font-semibold text-gray-900">
 									Re-authenticating
 								</h2>

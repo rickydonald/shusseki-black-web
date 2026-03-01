@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
     import { browser } from "$app/environment";
     import ChevronLeftIcon from "@untitled-theme/icons-svelte/ChevronLeftIcon.svelte";
     import ChevronUpIcon from "@untitled-theme/icons-svelte/ChevronUpIcon.svelte";
