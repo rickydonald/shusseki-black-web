@@ -1093,7 +1093,7 @@
         "date": "02.03.2026",
         "day": "MON",
         "events": [],
-        "day_order": "Day-1",
+        "day_order": "Day-2",
         "is_exam": false,
         "exam_type": null
     },
@@ -1103,7 +1103,7 @@
         "events": [
             "Loyola Students' Council (LSC) Valedictory"
         ],
-        "day_order": "Day-2",
+        "day_order": "Day-3",
         "is_exam": false,
         "exam_type": null
     },
@@ -1111,7 +1111,7 @@
         "date": "04.03.2026",
         "day": "WED",
         "events": [],
-        "day_order": "Day-3",
+        "day_order": "Day-4",
         "is_exam": false,
         "exam_type": null
     },
@@ -1119,7 +1119,7 @@
         "date": "05.03.2026",
         "day": "THU",
         "events": [],
-        "day_order": "Day-4",
+        "day_order": "Day-5",
         "is_exam": false,
         "exam_type": null
     },
@@ -1127,7 +1127,7 @@
         "date": "06.03.2026",
         "day": "FRI",
         "events": [],
-        "day_order": "Day-5",
+        "day_order": "Day-6",
         "is_exam": false,
         "exam_type": null
     },
@@ -1137,7 +1137,7 @@
         "events": [
             "College Day"
         ],
-        "day_order": "Day-6",
+        "day_order": "Day-1",
         "is_exam": false,
         "exam_type": null
     },
@@ -1155,22 +1155,18 @@
         "date": "09.03.2026",
         "day": "MON",
         "events": [
-            "Second CIA"
         ],
-        "day_order": "Day-1",
-        "is_exam": true,
-        "exam_type": "CIA 2"
+        "day_order": "Day-2",
+        "is_exam": false,
+        "exam_type": null
     },
     {
         "date": "10.03.2026",
         "day": "TUE",
-        "events": [
-            "Second CIA",
-            "Online Staff Assessment & Exit Poll"
-        ],
-        "day_order": "Day-2",
-        "is_exam": true,
-        "exam_type": "CIA 2"
+        "events": [],
+        "day_order": "Day-3",
+        "is_exam": false,
+        "exam_type": null
     },
     {
         "date": "11.03.2026",
@@ -1178,7 +1174,7 @@
         "events": [
             "Second CIA"
         ],
-        "day_order": "Day-3",
+        "day_order": "Day-4",
         "is_exam": true,
         "exam_type": "CIA 2"
     },
@@ -1188,7 +1184,7 @@
         "events": [
             "Second CIA"
         ],
-        "day_order": "Day-4",
+        "day_order": "Day-5",
         "is_exam": true,
         "exam_type": "CIA 2"
     },
@@ -1196,10 +1192,9 @@
         "date": "13.03.2026",
         "day": "FRI",
         "events": [
-            "Second CIA",
-            "Academic Council Meeting"
+            "Second CIA"
         ],
-        "day_order": "Day-5",
+        "day_order": "Day-6",
         "is_exam": true,
         "exam_type": "CIA 2"
     },
@@ -1209,7 +1204,7 @@
         "events": [
             "Second CIA"
         ],
-        "day_order": "Day-6",
+        "day_order": "Day-1",
         "is_exam": true,
         "exam_type": "CIA 2"
     },
@@ -1225,51 +1220,35 @@
         "date": "16.03.2026",
         "day": "MON",
         "events": [
-            "Release of Retest & One Test List"
+            "Second CIA"
         ],
-        "day_order": "Day-1",
-        "is_exam": false,
-        "exam_type": null
+        "day_order": "Day-2",
+        "is_exam": true,
+        "exam_type": "CIA 2"
     },
     {
         "date": "17.03.2026",
         "day": "TUE",
         "events": [
-            "Retest",
-            "IQAC Meeting - External Members",
-            "Practical Examinations UG-Allied/PG"
+            "Second CIA"
         ],
-        "day_order": "Day-2",
+        "day_order": "Day-3",
         "is_exam": true,
-        "exam_type": "Practicals"
+        "exam_type": "CIA 2"
     },
     {
         "date": "18.03.2026",
         "day": "WED",
         "events": [
-            "Retest",
-            "College Council Meeting",
-            "Practical Examinations UG - Allied / PG"
+            "Graduation Day"
         ],
-        "day_order": "Day-3",
-        "is_exam": true,
-        "exam_type": "Practicals"
+        "day_order": "Day-4",
+        "is_exam": false,
+        "exam_type": null
     },
     {
         "date": "19.03.2026",
         "day": "THU",
-        "events": [
-            "Retest",
-            "Practical Examinations UG-Allied/PG",
-            "Stock Verification"
-        ],
-        "day_order": "Day-4",
-        "is_exam": true,
-        "exam_type": "Practicals"
-    },
-    {
-        "date": "20.03.2026",
-        "day": "FRI",
         "events": [
             "Telugu New Year"
         ],
@@ -1278,11 +1257,21 @@
         "exam_type": null
     },
     {
+        "date": "20.03.2026",
+        "day": "FRI",
+        "events": [
+            "Stock Verification",
+            "Release of Retest & One Test List"
+        ],
+        "day_order": "Day-5",
+        "is_exam": false,
+        "exam_type": null
+    },
+    {
         "date": "21.03.2026",
         "day": "SAT",
         "events": [
-            "Penitential Walk to St. Thomas Mount",
-            "Ramzan (Eid-ul-Fitr)"
+            "Penitential Walk to St. Thomas Mount"
         ],
         "day_order": null,
         "is_exam": false,
@@ -1300,10 +1289,10 @@
         "date": "23.03.2026",
         "day": "MON",
         "events": [
-            "Hall Ticket Release",
-            "Practical Examinations UG-Major/PG"
+            "Retest",
+            "Practical Examinations UG-Allied/PG"
         ],
-        "day_order": "Day-5",
+        "day_order": "Day-6",
         "is_exam": true,
         "exam_type": "Practicals"
     },
@@ -1311,10 +1300,10 @@
         "date": "24.03.2026",
         "day": "TUE",
         "events": [
-            "Practical Examinations UG-Major/PG",
-            "General Staff Meeting & Last Signing Day"
+            "Retest",
+            "Practical Examinations UG-Allied/PG"
         ],
-        "day_order": "Day-6",
+        "day_order": "Day-1",
         "is_exam": true,
         "exam_type": "Practicals"
     },
@@ -1322,9 +1311,11 @@
         "date": "25.03.2026",
         "day": "WED",
         "events": [
-            "Practical Examinations UG- Major/PG"
+            "Retest",
+            "Academic Council Meeting",
+            "Practical Examinations UG-Allied/PG"
         ],
-        "day_order": "Day-1",
+        "day_order": "Day-2",
         "is_exam": true,
         "exam_type": "Practicals"
     },
@@ -1332,31 +1323,35 @@
         "date": "26.03.2026",
         "day": "THU",
         "events": [
-            "Semester Examinations Begin"
+            "Last Signing Day",
+            "General Staff Meeting",
+            "Practical Examinations UG-Major/PG"
         ],
-        "day_order": null,
+        "day_order": "Day-3",
         "is_exam": true,
-        "exam_type": "Semester"
+        "exam_type": "Practicals"
     },
     {
         "date": "27.03.2026",
         "day": "FRI",
         "events": [
-            "Semester Examinations"
+            "Practical Examinations UG-Major/PG"
         ],
         "day_order": null,
         "is_exam": true,
-        "exam_type": "Semester"
+        "exam_type": "Practicals"
     },
     {
         "date": "28.03.2026",
         "day": "SAT",
         "events": [
-            "Semester Examinations"
+            "Hall Ticket Release",
+            "College Council Meeting",
+            "Practical Examinations UG-Major/PG"
         ],
         "day_order": null,
         "is_exam": true,
-        "exam_type": "Semester"
+        "exam_type": "Practicals"
     },
     {
         "date": "29.03.2026",
@@ -1369,12 +1364,10 @@
     {
         "date": "30.03.2026",
         "day": "MON",
-        "events": [
-            "Semester Examinations"
-        ],
+        "events": [],
         "day_order": null,
-        "is_exam": true,
-        "exam_type": "Semester"
+        "is_exam": false,
+        "exam_type": null
     },
     {
         "date": "31.03.2026",
@@ -1389,12 +1382,10 @@
     {
         "date": "01.04.2026",
         "day": "WED",
-        "events": [
-            "Semester Examinations"
-        ],
+        "events": [],
         "day_order": null,
-        "is_exam": true,
-        "exam_type": "Semester"
+        "is_exam": false,
+        "exam_type": null
     },
     {
         "date": "02.04.2026",
@@ -1448,7 +1439,7 @@
         "date": "07.04.2026",
         "day": "TUE",
         "events": [
-            "Semester Examinations"
+            "Semester Examinations Begin"
         ],
         "day_order": null,
         "is_exam": true,
