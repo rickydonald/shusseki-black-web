@@ -42,7 +42,10 @@
 	import { toast } from "svelte-sonner";
 	import { slide, fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
-	import { scrapperProfileStore, scrapperStore } from "$lib/stores/attendance-store";
+	import {
+		scrapperProfileStore,
+		scrapperStore,
+	} from "$lib/stores/attendance-store";
 	import { RefreshCw01Icon } from "@untitled-theme/icons-svelte";
 
 	// ===== Props =====
@@ -287,7 +290,7 @@
 
 		setLoadingState(true);
 		resetErrorState();
-		
+
 		const reauthTimer = setTimeout(() => {
 			if (isLoading && !loadError) {
 				isReauthenticating = true;
@@ -296,15 +299,15 @@
 
 		try {
 			const { data } = await fetchAttendanceData();
-			
+
 			clearTimeout(reauthTimer);
-			
+
 			// Check if re-authentication occurred
 			if (data.reauthenticated) {
 				console.log("ERP session was re-authenticated");
 			}
 			isReauthenticating = false;
-			
+
 			scrapperStore.set(data.data.attendance);
 			scrapperProfileStore.set(data.data.profile);
 			setLoadingState(false);
@@ -415,14 +418,12 @@
 
 	// ===== User Display Functions =====
 	function getUserDisplayName(): string {
-		return helpers.capitalizeWords(
-			scrapperProfile?.name || "Student",
-		);
+		return helpers.capitalizeWords(scrapperProfile?.name || "Student");
 	}
 
 	function getUserFirstName(): string {
 		const showSecondName = ["25-PPH-010", "25-UBU-074"].includes(
-			data.user.userId
+			data.user.userId,
 		);
 		if (showSecondName) {
 			return getUserDisplayName().split(" ")[1];
@@ -502,7 +503,9 @@
 						</div>
 					{:else if isReauthenticating}
 						<div class="text-center px-6">
-							<div class="relative flex items-center justify-center-safe">
+							<div
+								class="relative flex items-center justify-center-safe"
+							>
 								<ShussekiLogo width={70} height={70} />
 							</div>
 							<div class="mt-6 space-y-2">
@@ -512,10 +515,28 @@
 								<p class="text-sm text-gray-600">
 									Refreshing your ERP session...
 								</p>
-								<div class="mt-4 inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-medium">
-									<svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-										<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-										<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+								<div
+									class="mt-4 inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-medium"
+								>
+									<svg
+										class="animate-spin h-4 w-4"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+									>
+										<circle
+											class="opacity-25"
+											cx="12"
+											cy="12"
+											r="10"
+											stroke="currentColor"
+											stroke-width="4"
+										></circle>
+										<path
+											class="opacity-75"
+											fill="currentColor"
+											d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+										></path>
 									</svg>
 									<span>Please wait...</span>
 								</div>
@@ -549,7 +570,9 @@
 							</div>
 							<div class="min-w-0 flex-1">
 								<p class="text-xs text-gray-500 leading-tight">
-									{#if isBirthday}
+									{#if data.user.userId === "25-PCS-018"}
+										<span class="text-white bg-red-500 rounded p-1 font-geist-mono!">ATTENDANCE OVERRIDE</span>
+									{:else if isBirthday}
 										🎂 Happy Birthday!
 									{:else}
 										Welcome back
@@ -615,6 +638,7 @@
 				in:slide={{ duration: 400, delay: 250, easing: cubicOut }}
 			>
 				{#if scrapper?.data?.summary}
+					<div></div>
 					<AttendanceSwitch
 						value={attendanceDisplayMode}
 						onclick={handleAttendanceSwitchChange}
