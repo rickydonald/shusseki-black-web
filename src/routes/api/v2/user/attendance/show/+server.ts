@@ -16,12 +16,7 @@ export async function GET({ locals, fetch }) {
             Wap7.decryptSessionCookie(locals.user.session)
         );
 
-        const buildCookieHeader = () =>
-            session.cookies
-                .map((c: { name: string; value: string }) => `${c.name}=${c.value}`)
-                .join("; ");
-
-        let cookieHeader = buildCookieHeader();
+        let cookieHeader = session.cookies ?? "";
         let reauthenticated = false;
 
         let profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
@@ -52,9 +47,7 @@ export async function GET({ locals, fetch }) {
             const updatedSession = JSON.parse(
                 Wap7.decryptSessionCookie(locals.user.session)
             );
-            cookieHeader = updatedSession.cookies
-                .map((c: { name: string; value: string }) => `${c.name}=${c.value}`)
-                .join("; ");
+            cookieHeader = updatedSession.cookies ?? "";
 
             profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
             attendance = await scrapeAttendance({ dno: locals.user.userId }, cookieHeader);

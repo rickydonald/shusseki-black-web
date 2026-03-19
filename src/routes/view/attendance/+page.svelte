@@ -570,9 +570,7 @@
 							</div>
 							<div class="min-w-0 flex-1">
 								<p class="text-xs text-gray-500 leading-tight">
-									{#if data.user.userId === "25-PCS-018"}
-										<span class="text-white bg-red-500 rounded p-1 font-geist-mono!">ATTENDANCE OVERRIDE</span>
-									{:else if isBirthday}
+									{#if isBirthday}
 										🎂 Happy Birthday!
 									{:else}
 										Welcome back

@@ -1,10 +1,26 @@
 {
-    "currentVersion": "2.0.1",
-    "versionCode": "NRPR19N25",
+    "currentVersion": "2.0.2",
+    "versionCode": "TRY18M26",
     "releases": [
         {
+            "version": "2.0.2",
+            "versionCode": "TRY18M26",
+            "date": "2026-03-19",
+            "title": "v2.0.2 - Bug Fixes and Major Improvements",
+            "highlights": [],
+            "features": [
+                {
+                    "title": "Login Performance Optimization",
+                    "description": "Significantly improved login performance, reducing load times and enhancing user experience.",
+                    "icon": "🚀"
+                }
+            ],
+            "improvements": [],
+            "bugFixes": []
+        },
+        {
             "version": "2.0.1",
-            "versionCode": "NRPR17N26",
+            "versionCode": "NRPR19N25",
             "date": "2025-12-12",
             "title": "v2.0.1 - Bug Fixes and Improvements",
             "highlights": [],

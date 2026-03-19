@@ -20,6 +20,7 @@
     let isLoading: boolean = $state(false);
     let openErpPasswordBottomSheet: boolean = $state(false);
     let departmentInputFocused: boolean = $state(false);
+    let showErpPassword: boolean = $state(false);
 
     let isSubmitButtonDisabled = $derived(!departmentNumber || isLoading);
     let isDobButtonDisabled = $derived(
@@ -107,6 +108,12 @@
             if (errorHandle.status === 403) {
                 error =
                     "Invalid CSRF token. Please refresh the page and try again.";
+                toast.error("Login failed.", { id: toastId, duration: 2000 });
+                isLoading = false;
+                return;
+            }
+            if (errorHandle.status === 401) {
+                error = "DNO or Password is incorrect, please try again!";
                 toast.error("Login failed.", { id: toastId, duration: 2000 });
                 isLoading = false;
                 return;
@@ -259,12 +266,24 @@
 
                     <!-- Password Input -->
                     <div class="mb-3">
+                        <div class="relative">
                         <input
-                            type="password"
+                            type={showErpPassword ? "text" : "password"}
                             placeholder="Enter ERP Password"
-                            class="border-2 px-5 py-3 rounded-xl w-full"
+                            class="border-2 px-5 py-3 pr-20 rounded-xl w-full"
                             bind:value={erpPassword}
                         />
+                            <button
+                                type="button"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-gray-600 hover:text-gray-900"
+                                onclick={() => (showErpPassword = !showErpPassword)}
+                                aria-label={showErpPassword
+                                    ? "Hide ERP password"
+                                    : "Show ERP password"}
+                            >
+                                {showErpPassword ? "Hide" : "Show"}
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Login Button -->

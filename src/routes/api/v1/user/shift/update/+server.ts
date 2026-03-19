@@ -53,10 +53,18 @@ export const POST: RequestHandler = async (event) => {
 			}, { status: 400 });
 		}
 
-		await db
+		const updateResult = await db
 			.update(users)
 			.set({ shift: shift })
 			.where(eq(users.userId, userId));
+
+		if (!updateResult[0]?.affectedRows) {
+			return json({
+				status: false,
+				error: "User not found for shift update",
+				errorCode: "user_not_found"
+			}, { status: 404 });
+		}
 
 		if (!locals.user) {
 			return json({

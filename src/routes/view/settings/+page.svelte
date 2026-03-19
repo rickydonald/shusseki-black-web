@@ -39,8 +39,8 @@
 			const response = await fetch("/api/v1/user/shift");
 			const data = await response.json();
 
-			if (data.status && data.shift) {
-				currentShift = data.shift;
+			if (data.status && (data.shift === 1 || data.shift === 2)) {
+				currentShift = Number(data.shift);
 			}
 		} catch (error) {
 			console.error("Failed to load shift preference:", error);
@@ -48,6 +48,10 @@
 			loadingShift = false;
 		}
 	}
+
+	onMount(() => {
+		void loadShiftPreference();
+	});
 
 	async function updateShiftPreference(newShift: number) {
 		// Prevent updates if already updating or same shift

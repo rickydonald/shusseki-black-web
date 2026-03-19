@@ -19,9 +19,7 @@ export async function scrapeAttendance(
 
         const $ = cheerio.load(html);
 
-        /* ---------------------------------
-           STUDENT BASIC INFO
-        ----------------------------------*/
+        // Basic Student Information
         let name = '';
 
         $('table')
@@ -39,9 +37,7 @@ export async function scrapeAttendance(
                 }
             });
 
-        /* ---------------------------------
-           SUMMARY (FROM HIDDEN INPUTS)
-        ----------------------------------*/
+        // Attendance Summary from Hidden Inputs
         const getHidden = (id: string) =>
             Number($(`input#${id}`).attr('value')) || 0;
 
@@ -52,14 +48,9 @@ export async function scrapeAttendance(
                     .replace(/[^0-9.]/g, '')
             ) || 0;
 
-        let attendancePresentOverride = 0;
-        if (data.dno.toUpperCase() === "25-PCS-018") {
-            attendancePresentOverride = 8;
-        }
-
         const summaryRaw = {
-            hoursPresent: getHidden('hdnHrsPresent') + attendancePresentOverride,
-            hoursAbsent: getHidden('hdnHrsAbsent') - attendancePresentOverride,
+            hoursPresent: getHidden('hdnHrsPresent'),
+            hoursAbsent: getHidden('hdnHrsAbsent'),
             hoursCL: getHidden('hdnCL'),
             hoursML: getHidden('hdnML'),
             hoursOD: getHidden('hdnOD'),
@@ -74,9 +65,7 @@ export async function scrapeAttendance(
             data.dno
         );
 
-        /* ---------------------------------
-           HOUR-WISE ATTENDANCE TABLE
-        ----------------------------------*/
+        // Hour-wise attendance table
         const attendance: Record<string, string[]> = {};
 
         const rows = $('table[name="table1"] tr');
@@ -98,9 +87,7 @@ export async function scrapeAttendance(
             attendance[date] = hours;
         });
 
-        /* ---------------------------------
-           LIFE SKILL HOURS
-        ----------------------------------*/
+        // Life Skill Attendance
         const lifeSkillEntries: Record<string, string> = {};
         let lifeSkillPresentCount = 0;
         let lifeSkillTotalRows = 0;
@@ -121,9 +108,6 @@ export async function scrapeAttendance(
             if (status === 'P') lifeSkillPresentCount++;
         });
 
-        /* ---------------------------------
-           FINAL RESULT
-        ----------------------------------*/
         const result = {
             student: {
                 name,

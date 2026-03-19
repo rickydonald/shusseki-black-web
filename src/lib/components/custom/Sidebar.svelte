@@ -112,7 +112,7 @@
         >
             <div class="mt-3 pt-3 border-t border-white/5">
                 <p class="text-[11px] text-gray-600 text-center font-mono">
-                    v{Constants._SITE.VERSION}
+                    X28 Labs | v{Constants._SITE.VERSION}
                 </p>
             </div>
         </footer>

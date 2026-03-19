@@ -1,7 +1,7 @@
 import { error, json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
-import type { ErpSession, User } from "$lib/types/session.type";
-import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright";
+import type { ErpSession } from "$lib/types/session.type";
+import { erpLogin } from "$lib/models/erp-scrapper/login";
 import { Wap7 } from "$lib/utils/wap7";
 import { Constants } from "$lib/constants";
 import jwt from 'jsonwebtoken'
@@ -18,7 +18,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
         }, { status: 200 });
     }
 
-    const login = await erpLoginWithPlaywright({ username, password });
+    const login = await erpLogin({ username, password });
     if (!login.success) {
         return json({
             response: false,
@@ -33,7 +33,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             username,
             password
         },
-        cookies: login.cookies ?? []
+        cookies: login.cookies ?? ""
     }
     const encryptedSessionCookie = Wap7.encryptSessionCookie(JSON.stringify(erpSession));
 

@@ -10,10 +10,9 @@ import { DateTime } from "luxon";
 import { eq } from "drizzle-orm";
 import { checkBruteForce, recordFailure, resetFailures } from "$lib/server/rate-limiter";
 import type { ErpSession, User } from "$lib/types/session.type";
-import { erpLoginWithPlaywright } from "$lib/server/erp.login.playwright";
 import { Wap7 } from "$lib/utils/wap7";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile";
-import { buildCookieHeader } from "$lib/h";
+import { erpLogin } from "$lib/models/erp-scrapper/login";
 
 export const POST: RequestHandler = async ({ request, cookies, locals }) => {
     const formData = await request.formData();
@@ -73,7 +72,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
     }
 
     // Fetch attendance data from scrapper
-    const login = await erpLoginWithPlaywright({ username: dno, password: erpPassword });
+    const login = await erpLogin({ username: dno, password: erpPassword });
     if (!login.success) {
         await recordFailure(dno);
         return json({
@@ -87,8 +86,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
 
     // Ensure user exists in database else create new user
     if (shussekiUserRecord.length === 0) {
-        const cookieHeader = buildCookieHeader({ cookies: login.cookies ?? [] });
-        const profile = await scrapeStudentProfile(cookieHeader);
+        const profile = await scrapeStudentProfile(login.cookies ?? "");
         await db.insert(users).values({
             userId: dno,
             name: profile.name ?? "",
@@ -111,7 +109,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals }) => {
             username: dno,
             password: erpPassword
         },
-        cookies: login.cookies ?? []
+        cookies: login.cookies
     }
     const encryptedSessionCookie = Wap7.encryptSessionCookie(JSON.stringify(session));
 

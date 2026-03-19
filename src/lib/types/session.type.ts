@@ -45,5 +45,5 @@ export interface ErpSession {
         username: string;
         password: string;
     },
-    cookies: Cookie[];
+    cookies: string;
 }
