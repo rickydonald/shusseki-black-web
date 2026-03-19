@@ -1,5 +1,3 @@
-import type { Cookie } from "playwright-core";
-
 /**
  * Session information stored in JWT
  */

@@ -50,7 +50,6 @@
 	},
 	"dependencies": {
 		"@noble/ciphers": "^2.1.1",
-		"@sparticuz/chromium": "^143.0.4",
 		"@sveltejs/adapter-vercel": "^6.3.3",
 		"@untitled-theme/icons-svelte": "^0.14.2",
 		"@upstash/ratelimit": "^2.0.8",
@@ -69,7 +68,6 @@
 		"luxon": "^3.7.2",
 		"mysql2": "^3.18.2",
 		"nanoid": "^5.1.6",
-		"playwright-core": "^1.58.2",
 		"semver": "^7.7.4",
 		"svelte-bottom-sheet": "^2.3.0",
 		"svelte-sonner": "^1.0.8",
