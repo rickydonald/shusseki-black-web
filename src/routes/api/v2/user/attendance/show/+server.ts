@@ -2,6 +2,9 @@ import { json } from "@sveltejs/kit";
 import { Wap7 } from "$lib/utils/wap7";
 import { scrapeAttendance } from "$lib/models/erp-scrapper/attendance";
 import { scrapeStudentProfile } from "$lib/models/erp-scrapper/profile";
+import { Constants } from "$lib/constants";
+import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "$env/static/private";
 
 export async function GET({ locals, fetch }) {
     try {
@@ -43,14 +46,44 @@ export async function GET({ locals, fetch }) {
                 );
             }
 
-            // Update session with new cookies from the reauthentication
-            const updatedSession = JSON.parse(
+            // Read the freshly issued app session token from Set-Cookie so this same
+            const fallbackSession = JSON.parse(
                 Wap7.decryptSessionCookie(locals.user.session)
             );
-            cookieHeader = updatedSession.cookies ?? "";
+            const setCookieHeader =
+                loginRes.headers.get("set-cookie") ??
+                (
+                    (loginRes.headers as unknown as { getSetCookie?: () => string[] })
+                        .getSetCookie?.() ?? []
+                ).join(",");
+            const tokenMatch = setCookieHeader.match(
+                new RegExp(`${Constants._COOKIES.SESSION_COOKIE_NAME}=([^;]+)`)
+            );
+
+            if (tokenMatch?.[1]) {
+                try {
+                    const payload = jwt.verify(tokenMatch[1], JWT_SECRET);
+                    const encryptedSession =
+                        typeof payload === "object" && payload?.session
+                            ? String(payload.session)
+                            : "";
+
+                    if (encryptedSession) {
+                        const updatedSession = JSON.parse(
+                            Wap7.decryptSessionCookie(encryptedSession)
+                        );
+                        cookieHeader = updatedSession.cookies ?? fallbackSession.cookies ?? "";
+                    } else {
+                        cookieHeader = fallbackSession.cookies ?? "";
+                    }
+                } catch {
+                    cookieHeader = fallbackSession.cookies ?? "";
+                }
+            } else {
+                cookieHeader = fallbackSession.cookies ?? "";
+            }
 
             profile = await scrapeStudentProfile(cookieHeader, ["name", "deptNo"]);
-            attendance = await scrapeAttendance({ dno: locals.user.userId }, cookieHeader);
 
             if (!profile?.name) {
                 return json(
